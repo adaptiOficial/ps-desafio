@@ -1,0 +1,39 @@
+{
+    "git.autofetch": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "terminal.integrated.fontFamily": "monospace",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    },
+    "git.confirmSync": false,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "files.autoSave": "onFocusChange",
+    "trailing-spaces.trimOnSave": true,
+    "editor.suggestSelection": "first",
+    "editor.tabSize": 2,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "prettier.vueIndentScriptAndStyle": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "intelephense.diagnostics.undefinedTypes": false
+}

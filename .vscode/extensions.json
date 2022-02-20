@@ -1,0 +1,19 @@
+{
+    "recommendations": [
+        "coenraads.bracket-pair-colorizer-2",
+        "kamikillerto.vscode-colorize",
+        "waderyan.gitblame",
+        "eamodio.gitlens",
+        "shufo.vscode-blade-formatter",
+        "onecentlin.laravel-blade",
+        "austenc.laravel-blade-spacer",
+        "christian-kohler.path-intellisense",
+        "xdebug.php-debug",
+        "xdebug.php-pack",
+        "zobo.php-intellisense",
+        "ms-ceintl.vscode-language-pack-pt-br",
+        "esbenp.prettier-vscode",
+        "shardulm94.trailing-spaces",
+        "bmewburn.vscode-intelephense-client"
+    ]
+}
