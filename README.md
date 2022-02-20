@@ -6,9 +6,9 @@
 - Criar arquivo .env com base no .env.example
 - Executar **php artisan key:generate**
 - Executar **php artisan migrate --seed**
-- Marcar tempo no clockify e iniciar a tarefa
 
-Você precisa de fazer um fork do projeto para seu repositório
+Você precisa de fazer um fork do projeto para seu repositório.
+(Confira o link da documentação)
 
 Depois, no terminal na pasta do seu projeto dê o comando: 
 
@@ -18,11 +18,9 @@ Criar uma branch
 - git checkout -b **nomebranch**
 
 Quando solicitado "Dar pull":
-
 - git pull origin **nomebranch**
 
 Ao concluir uma tarefa:
-
 - git add .
 - git commit -m **nomedocommit**
 - git push **seunome** **nomebranch**
