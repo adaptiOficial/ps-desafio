@@ -1,26 +1,18 @@
- # Para iniciar a trabalhar no projeto:
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-- git clone **linkdorepositório**
-- Executar **composer update** na pasta do projeto
-- Criar schema no Banco de Dados
-- Criar arquivo .env com base no .env.example
-- Executar **php artisan key:generate**
-- Executar **php artisan migrate --seed**
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-Você precisa de fazer um fork do projeto para seu repositório.
-(Confira o link da documentação)
+## Descrição
 
-Depois, no terminal na pasta do seu projeto dê o comando: 
+Template de painel administrativo utilizando o [Material DashBoard](https://www.creative-tim.com/product/material-dashboard-laravel), utilize esse template para acelerar a construção dos sites/sistemas.
 
-- git remote add **seunome** **linkdofork**
+Laravel 9
 
-Criar uma branch
-- git checkout -b **nomebranch**
+## Utilização
 
-Quando solicitado "Dar pull":
-- git pull origin **nomebranch**
-
-Ao concluir uma tarefa:
-- git add .
-- git commit -m **nomedocommit**
-- git push **seunome** **nomebranch**
+Basta criar um repositório e selecionar esse como template, para total compreenção das classes css e etc... verifique a [DOCUMENTAÇÃO](https://material-dashboard-laravel.creative-tim.com/docs/getting-started/frontend-assets.html)

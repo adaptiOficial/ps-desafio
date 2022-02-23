@@ -38,6 +38,22 @@
                                 </a>
                             </li>
                         </ul>
+                        {{-- <ul class="nav">
+                            <li class="nav-item{{ $activePage == 'jogadores-management' ? ' active' : '' }}">
+                                <a class="nav-link" href="{{ route('SUAVARIAVEL.index') }}">
+                                    <i class="sidebar-mini"><span class="material-icons">PROCURE_UM_ICON_NAME</span></i>
+                                    <span class="sidebar-normal">{{ __('Suavariavel') }} </span>
+                                </a>
+                            </li>
+                        </ul> --}}
+                        <ul class="nav">
+                            <li class="nav-item{{ $activePage == 'nacionalidade-management' ? ' active' : '' }}">
+                                <a class="nav-link" href="{{ route('nacionalidade.index') }}">
+                                    <i class="sidebar-mini"><span class="material-icons">view_comfy_alt</span></i>
+                                    <span class="sidebar-normal">{{ __('Nacionalidade') }} </span>
+                                </a>
+                            </li>
+                        </ul>
                         <ul class="nav">
                             <li class="nav-item{{ $activePage == 'log-list' ? ' active' : '' }}">
                                 <a class="nav-link" href="{{ route('log.index') }}">
