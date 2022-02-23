@@ -1,4 +1,4 @@
- # Para iniciar a trabalhar no projeto:
+ # Para iniciar os trabalhos no projeto:
 
 - git clone **linkdorepositório**
 - Executar **composer update** na pasta do projeto
