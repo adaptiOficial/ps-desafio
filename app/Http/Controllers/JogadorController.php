@@ -56,6 +56,7 @@ class JogadorController extends Controller
     public function show($id)
     {
         $jogador = $this->jogadores->find($id);
+
         return json_encode($jogador);
     }
 
