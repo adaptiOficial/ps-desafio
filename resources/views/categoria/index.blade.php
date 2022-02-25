@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'nacionalidade-management', 'titlePage' => __('Users')])
+@extends('layouts.app', ['activePage' => 'categoria-management', 'titlePage' => __('Users')])
 
 @section('content')
     <div class="content">
@@ -7,14 +7,13 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header card-header-primary">
-                            <a class="float-right" href="{{ route('nacionalidade.create') }}">
-                                <button type="button" title="{{ __('Add Nacionalidade') }}"
-                                    class="btn btn-primary add-button">
-                                    <i class="material-icons">add_circle_outline</i>{{ __('Add Nacionalidade') }}
+                            <a class="float-right" href="{{ route('categoria.create') }}">
+                                <button type="button" title="{{ __('Add Categoria') }}" class="btn btn-primary add-button">
+                                    <i class="material-icons">add_circle_outline</i>{{ __('Add categoria') }}
                                 </button>
                             </a>
-                            <h4 class="card-title ">{{ __('Nacionalidade') }}</h4>
-                            <p class="card-category">{{ __('Lista de todas nacionalidades') }}</p>
+                            <h4 class="card-title ">{{ __('Categorias') }}</h4>
+                            <p class="card-category">{{ __('Lista de todas categorias') }}</p>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -24,20 +23,20 @@
                                             ID
                                         </th>
                                         <th>
-                                            {{ __('Nacionalidade') }}
+                                            {{ __('Categoria') }}
                                         </th>
                                         <th>
                                             {{ __('Actions') }}
                                         </th>
                                     </thead>
                                     <tbody>
-                                        @foreach ($nacionalidades as $nacionalidade)
+                                        @foreach ($categorias as $categoria)
                                             <tr>
-                                                <td>{{ $nacionalidade->id }}</td>
-                                                <td>{{ $nacionalidade->nacionalidade }}</td>
+                                                <td>{{ $categoria->id }}</td>
+                                                <td>{{ $categoria->categoria }}</td>
                                                 <td>
                                                     <!-- botao editar -->
-                                                    <a href="{{ route('nacionalidade.edit', $nacionalidade->id) }}">
+                                                    <a href="{{ route('categoria.edit', $categoria->id) }}">
                                                         <button type="button" title="{{ __('Edit') }}"
                                                             class="btn btn-warning">
                                                             <i class="material-icons" style="color: white">edit</i>
@@ -45,7 +44,7 @@
                                                     </a>
                                                     <!-- Botao apagar -->
                                                     <button type="button" title="{{ __('Delete') }}" data-toggle="modal"
-                                                        data-target="#modal-excluir" data-id="{{ $nacionalidade->id }}"
+                                                        data-target="#modal-excluir" data-id="{{ $categoria->id }}"
                                                         class="btn btn-danger">
                                                         <i class="material-icons">close</i>
                                                     </button>
@@ -68,7 +67,7 @@
                     <div class="modal-header">
                         <h5 class="modal-title col-12 text-dark" id="serviceModalLabel">Confirmação</h5>
                     </div>
-                    <div class="modal-body" align="center">Tem certeza de que quer excluir essa Nacionalidade?</div>
+                    <div class="modal-body" align="center">Tem certeza de que quer excluir essa categoria?</div>
                     <div id="excluir-associate" style="text-align: center"></div>
                     <style type="text/css">
                         p.bold-red {
@@ -101,7 +100,7 @@
             var button = $(event.relatedTarget)
             let modal = $(this)
             const id = button.data('id')
-            const url = 'nacionalidade/' + id
+            const url = 'categoria/' + id
             $.getJSON(url, (resposta) => {
 
             });
@@ -110,8 +109,8 @@
         $('#modal-excluir').on('show.bs.modal', function(event) {
             var button = $(event.relatedTarget)
             const id = button.data('id')
-            const url2 = 'nacionalidade/' + id
-            $('#form-excluir').attr('action', 'nacionalidade/' + id)
+            const url2 = 'categoria/' + id
+            $('#form-excluir').attr('action', 'categoria/' + id)
         })
     </script>
 @endpush

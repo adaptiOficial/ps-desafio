@@ -1,4 +1,4 @@
-{{-- @extends('layouts.app', ['activePage' => 'suavariavel', 'titlePage' => __('suavariavel')])
+@extends('layouts.app', ['activePage' => 'categoria', 'titlePage' => __('Categorias')])
 
 @section('content')
     <div class="content">
@@ -6,11 +6,11 @@
             <div class="row">
                 <div class="col-md-12">
                     <form id="form-member" method="POST" class="form-horizontal"
-                        action="{{ isset($SUAVARIAVELSINGULAR) ? route('SUAVARIAVELSINGULAR.update', $SUAVARIAVELSINGULAR->id) : route('SUAVARIAVELSINGULAR.store') }}"
+                        action="{{ isset($categoria) ? route('categoria.update', $categoria->id) : route('categoria.store') }}"
                         enctype="multipart/form-data">
 
                         @csrf
-                        @isset($SUAVARIAVELSINGULAR)
+                        @isset($categoria)
                             @method("PUT")
                         @else
                             @method("POST")
@@ -19,9 +19,9 @@
                         <div class="card ">
                             <div class="card-header card-header-primary">
                                 <h4 class="card-title">
-                                    {{ isset($SUAVARIAVELSINGULAR) ? __('Edit SUAVARIAVELSINGULAR') : __('Create SUAVARIAVELSINGULAR') }}
+                                    {{ isset($categoria) ? __('Edit categoria') : __('Create categoria') }}
                                 </h4>
-                                <p class="card-category">{{ __('SUAVARIAVELSINGULAR information') }}</p>
+                                <p class="card-category">{{ __('Informação da categoria') }}</p>
                             </div>
                             <div class="card-body ">
                                 @if (session('status'))
@@ -37,12 +37,12 @@
                                         </div>
                                     </div>
                                 @endif
-                                @component('admin.SUAVARIAVELSINGULAR.form', ['SUAVARIAVELSINGULAR' => isset($SUAVARIAVELSINGULAR) ? $SUAVARIAVELSINGULAR : null])
+                                @component('categoria.formulario', ['categoria' => isset($categoria) ? $categoria : null])
                                 @endcomponent
                             </div>
                             <div class="card-footer ml-auto mr-auto">
                                 <button type="submit" class="btn btn-success">{{ __('Save') }}</button>
-                                <a href="{{ route('SUAVARIAVELSINGULAR.index') }}" class="btn btn-secondary">Voltar</a>
+                                <a href="{{ route('categoria.index') }}" class="btn btn-secondary">Voltar</a>
                             </div>
                         </div>
                     </form>
@@ -53,4 +53,4 @@
         </div> <!-- end container -->
     </div>
     <!-- end wrapper -->
-@endsection --}}
+@endsection

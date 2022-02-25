@@ -13,10 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('nacionalidades', function (Blueprint $table) {
-            $table->id();
-            $table->string('nacionalidade');
-            $table->timestamps();
+        Schema::create('produtos', function (Blueprint $table) {
         });
     }
 
@@ -27,6 +24,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nacionalidades');
+        Schema::dropIfExists('produtos');
     }
 };

@@ -38,19 +38,19 @@
                                 </a>
                             </li>
                         </ul>
-                        {{-- <ul class="nav">
-                            <li class="nav-item{{ $activePage == 'jogadores-management' ? ' active' : '' }}">
-                                <a class="nav-link" href="{{ route('SUAVARIAVEL.index') }}">
-                                    <i class="sidebar-mini"><span class="material-icons">PROCURE_UM_ICON_NAME</span></i>
-                                    <span class="sidebar-normal">{{ __('Suavariavel') }} </span>
+                        <ul class="nav">
+                            <li class="nav-item{{ $activePage == 'produtos-management' ? ' active' : '' }}">
+                                <a class="nav-link" href="{{ route('produto.index') }}">
+                                    <i class="sidebar-mini"><span class="material-icons">paid</span></i>
+                                    <span class="sidebar-normal">{{ __('Produtos') }} </span>
                                 </a>
                             </li>
-                        </ul> --}}
+                        </ul>
                         <ul class="nav">
-                            <li class="nav-item{{ $activePage == 'nacionalidade-management' ? ' active' : '' }}">
-                                <a class="nav-link" href="{{ route('nacionalidade.index') }}">
+                            <li class="nav-item{{ $activePage == 'categoria-management' ? ' active' : '' }}">
+                                <a class="nav-link" href="{{ route('categoria.index') }}">
                                     <i class="sidebar-mini"><span class="material-icons">view_comfy_alt</span></i>
-                                    <span class="sidebar-normal">{{ __('Nacionalidade') }} </span>
+                                    <span class="sidebar-normal">{{ __('Categoria') }} </span>
                                 </a>
                             </li>
                         </ul>
