@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'nacionalidade', 'titlePage' => __('Nacionalidades')])
+@extends('layouts.app', ['activePage' => 'Produtos', 'titlePage' => __('Produtos')])
 
 @section('content')
     <div class="content">
@@ -6,11 +6,11 @@
             <div class="row">
                 <div class="col-md-12">
                     <form id="form-member" method="POST" class="form-horizontal"
-                        action="{{ isset($nacionalidade) ? route('nacionalidade.update', $nacionalidade->id) : route('nacionalidade.store') }}"
+                        action="{{ isset($produto) ? route('produto.update', $produto->id) : route('produto.store') }}"
                         enctype="multipart/form-data">
 
                         @csrf
-                        @isset($nacionalidade)
+                        @isset($produto)
                             @method("PUT")
                         @else
                             @method("POST")
@@ -19,9 +19,9 @@
                         <div class="card ">
                             <div class="card-header card-header-primary">
                                 <h4 class="card-title">
-                                    {{ isset($nacionalidade) ? __('Edit nacionalidade') : __('Create Nacionalidade') }}
+                                    {{ isset($produto) ? __('Edit produto') : __('Create produto') }}
                                 </h4>
-                                <p class="card-category">{{ __('Nacionalidade information') }}</p>
+                                <p class="card-category">{{ __('produto information') }}</p>
                             </div>
                             <div class="card-body ">
                                 @if (session('status'))
@@ -37,13 +37,13 @@
                                         </div>
                                     </div>
                                 @endif
-                                @component('nacionalidade.formulario', ['nacionalidade' => isset($nacionalidade) ?
-                                    $nacionalidade : null])
+                                @component('produto.formulario', ['produto' => isset($produto) ? $produto : null,
+                                    'categorias' => $categorias])
                                 @endcomponent
                             </div>
                             <div class="card-footer ml-auto mr-auto">
                                 <button type="submit" class="btn btn-success">{{ __('Save') }}</button>
-                                <a href="{{ route('nacionalidade.index') }}" class="btn btn-secondary">Voltar</a>
+                                <a href="{{ route('produto.index') }}" class="btn btn-secondary">Voltar</a>
                             </div>
                         </div>
                     </form>

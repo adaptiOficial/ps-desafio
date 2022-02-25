@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'jogador-management', 'titlePage' => __('Users')])
+@extends('layouts.app', ['activePage' => 'categoria-management', 'titlePage' => __('Users')])
 
 @section('content')
     <div class="content">
@@ -7,13 +7,13 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header card-header-primary">
-                            <a class="float-right" href="{{ route('jogador.create') }}">
-                                <button type="button" title="{{ __('Add jogador') }}" class="btn btn-primary add-button">
-                                    <i class="material-icons">add_circle_outline</i>{{ __('Add jogador') }}
+                            <a class="float-right" href="{{ route('categoria.create') }}">
+                                <button type="button" title="{{ __('Add Categoria') }}" class="btn btn-primary add-button">
+                                    <i class="material-icons">add_circle_outline</i>{{ __('Add categoria') }}
                                 </button>
                             </a>
-                            <h4 class="card-title ">{{ __('Jogador') }}</h4>
-                            <p class="card-category">{{ __('Lista de todos os jogadores') }}</p>
+                            <h4 class="card-title ">{{ __('Categorias') }}</h4>
+                            <p class="card-category">{{ __('Lista de todas categorias') }}</p>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -23,20 +23,20 @@
                                             ID
                                         </th>
                                         <th>
-                                            {{ __('Nome') }}
+                                            {{ __('Categoria') }}
                                         </th>
                                         <th>
                                             {{ __('Actions') }}
                                         </th>
                                     </thead>
                                     <tbody>
-                                        @foreach ($jogadores as $jogador)
+                                        @foreach ($categorias as $categoria)
                                             <tr>
-                                                <td>{{ $jogador->id }}</td>
-                                                <td>{{ $jogador->nome }}</td>
+                                                <td>{{ $categoria->id }}</td>
+                                                <td>{{ $categoria->categoria }}</td>
                                                 <td>
                                                     <!-- botao editar -->
-                                                    <a href="{{ route('jogador.edit', $jogador->id) }}">
+                                                    <a href="{{ route('categoria.edit', $categoria->id) }}">
                                                         <button type="button" title="{{ __('Edit') }}"
                                                             class="btn btn-warning">
                                                             <i class="material-icons" style="color: white">edit</i>
@@ -44,17 +44,10 @@
                                                     </a>
                                                     <!-- Botao apagar -->
                                                     <button type="button" title="{{ __('Delete') }}" data-toggle="modal"
-                                                        data-target="#modal-excluir" data-id="{{ $jogador->id }}"
+                                                        data-target="#modal-excluir" data-id="{{ $categoria->id }}"
                                                         class="btn btn-danger">
                                                         <i class="material-icons">close</i>
                                                     </button>
-                                                    <!-- Botao visualizar -->
-                                                    <button type="button" title="{{ __('Visualizar') }}"
-                                                        data-toggle="modal" data-target="#modal-detalhes"
-                                                        data-id="{{ $jogador->id }}" class="btn btn-danger">
-                                                        <i class="material-icons">visibility</i>
-                                                    </button>
-
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -74,8 +67,7 @@
                     <div class="modal-header">
                         <h5 class="modal-title col-12 text-dark" id="serviceModalLabel">Confirmação</h5>
                     </div>
-                    <div class="modal-body" align="center">Tem certeza de que quer excluir esse Jogador?
-                    </div>
+                    <div class="modal-body" align="center">Tem certeza de que quer excluir essa categoria?</div>
                     <div id="excluir-associate" style="text-align: center"></div>
                     <style type="text/css">
                         p.bold-red {
@@ -97,39 +89,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Modal visualizar -->
-
-        <div id="modal-detalhes" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title col-12 text-dark" id="serviceModalLabel">Visualização do Jogador</h5>
-                    </div>
-
-                    <div class="modal-body">
-                        <div class="row">
-
-                            <div class="form-group col-md-12 col-sm-12">
-                                <label for="nome">Nome</label>
-                                <input type="text" id="detalhes-nome" name="detalhes-nome" class="form-control" readonly>
-                            </div>
-
-                            <div class="form-group col-md-12 col-sm-12">
-                                <label for="data">Data de nascimento</label>
-                                <input type="text" id="detalhes-datadenascimento" name="detalhes-datadenascimento"
-                                    class="form-control" readonly>
-                            </div>
-
-                            <img id="detalhes-imagem" class="form-group col-md-6 col-sm-12" />
-
-                        </div>
-                    </div>
-                    <button type="button" class="btn btn-dark" data-dismiss="modal">Fechar</button>
-                </div>
-            </div>
-        </div>
-    </div>
     </div>
 @endsection
 
@@ -141,20 +100,17 @@
             var button = $(event.relatedTarget)
             let modal = $(this)
             const id = button.data('id')
-            const url = 'jogador/' + id
+            const url = 'categoria/' + id
             $.getJSON(url, (resposta) => {
-                console.log(resposta);
-                $("#detalhes-nome").val(resposta.nome);
-                $("#detalhes-datadenascimento").val(resposta.data);
-                $("#detalhes-imagem").attr('src', '/storage/' + resposta.imagem);
+
             });
         })
         /* js para abrir Modal de excluir de forma dinâmica */
         $('#modal-excluir').on('show.bs.modal', function(event) {
             var button = $(event.relatedTarget)
             const id = button.data('id')
-            const url2 = 'jogador/' + id
-            $('#form-excluir').attr('action', 'jogador/' + id)
+            const url2 = 'categoria/' + id
+            $('#form-excluir').attr('action', 'categoria/' + id)
         })
     </script>
 @endpush

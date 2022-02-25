@@ -13,13 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('jogadores', function (Blueprint $table) {
-            $table->id();
-            $table->string('nome');
-            $table->string('data');
-            $table->string('imagem');
-            $table->foreignId('nacionalidades_id')->constrained('nacionalidades')->onDelete('cascade');
-            $table->timestamps();
+        Schema::create('produtos', function (Blueprint $table) {
         });
     }
 
@@ -30,6 +24,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jogadores');
+        Schema::dropIfExists('produtos');
     }
 };
