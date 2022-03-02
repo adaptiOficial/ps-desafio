@@ -19,9 +19,9 @@
                         <div class="card ">
                             <div class="card-header card-header-primary">
                                 <h4 class="card-title">
-                                    {{ isset($categoria) ? __('Edit categoria') : __('Create categoria') }}
+                                    {{ isset($categoria) ? __('Editar Categoria') : __('Criar Categoria') }}
                                 </h4>
-                                <p class="card-category">{{ __('Informação da categoria') }}</p>
+                                <p class="card-category">{{ __('Informação da Categoria') }}</p>
                             </div>
                             <div class="card-body ">
                                 @if (session('status'))
