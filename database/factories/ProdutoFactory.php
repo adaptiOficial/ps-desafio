@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Categoria;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Produto>
@@ -17,7 +18,12 @@ class ProdutoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nome' => $this->faker->name(),
+            'preco' => $this->faker->numberBetween(5, 100),
+            'descricao' => $this->faker->sentence(5),
+            'quantidade' => $this->faker->numberBetween(1, 100),
+            'imagem' => str_replace("public/storage\\", '', $this->faker->image('public/storage')),
+            'categoria_id' => $this->faker->numberBetween(1, Categoria::all()->last()->id),
         ];
     }
 }
