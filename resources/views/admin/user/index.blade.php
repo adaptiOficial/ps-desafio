@@ -120,7 +120,7 @@
             var button = $(event.relatedTarget)
             const id = button.data('id')
             const url2 = 'associate/' + id
-            $('#form-excluir').attr('action', 'client/' + id)
+            $('#form-excluir').attr('action', 'user/' + id)
         })
     </script>
 @endpush
