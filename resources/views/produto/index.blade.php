@@ -162,12 +162,12 @@
             const url = 'produto/' + id
             $.getJSON(url, (resposta) => {
                 console.log(resposta);
-                $("#detalhes-nome").val(resposta.nome);
-                $("#detalhes-preço").val(resposta.preco);
-                $("#detalhes-descricao").val(resposta.descricao);
-                $("#detalhes-quantidade").val(resposta.quantidade);
-                $("#detalhes-categoria").val(resposta.categoria);
-                $("#detalhes-imagem").attr('src', '/storage/' + resposta.imagem);
+                $("#detalhes-nome").val(resposta[0].nome);
+                $("#detalhes-preço").val(resposta[0].preco);
+                $("#detalhes-descricao").val(resposta[0].descricao);
+                $("#detalhes-quantidade").val(resposta[0].quantidade);
+                $("#detalhes-categoria").val(resposta[1].categoria);
+                $("#detalhes-imagem").attr('src', '/storage/' + resposta[0].imagem);
             });
         })
         /* js para abrir Modal de excluir de forma dinâmica */
