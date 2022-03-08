@@ -167,7 +167,7 @@
                 $("#detalhes-descricao").val(resposta.descricao);
                 $("#detalhes-quantidade").val(resposta.quantidade);
                 $("#detalhes-categoria").val(resposta.categoria);
-                $("#detalhes-imagem").attr('src', '/storage/' + resposta.imagem);
+                $("#detalhes-imagem").attr('src', resposta.imagem);
             });
         })
         /* js para abrir Modal de excluir de forma dinâmica */
