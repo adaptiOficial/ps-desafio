@@ -22,7 +22,7 @@ class ProdutoFactory extends Factory
             'preco' => $this->faker->numberBetween(5, 100),
             'descricao' => $this->faker->sentence(5),
             'quantidade' => $this->faker->numberBetween(1, 100),
-            'imagem' => str_replace("public/storage\\", '', $this->faker->image('public/storage')),
+            'imagem' => str_replace("public/", '', $this->faker->image('public/produtosIMG')),
             'categoria_id' => $this->faker->numberBetween(1, Categoria::all()->last()->id),
         ];
     }

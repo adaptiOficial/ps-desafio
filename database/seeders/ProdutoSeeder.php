@@ -21,7 +21,7 @@ class ProdutoSeeder extends Seeder
                 'preco' => 30.00,
                 'descricao' => 'Pão, burguer do futuro, cheddar vegetal, alface e tomate.',
                 'quantidade' => 5,
-                'imagem' => 'vegano.jpg',
+                'imagem' => 'produtosIMG/vegano.jpg',
                 'categoria_id' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
@@ -31,7 +31,7 @@ class ProdutoSeeder extends Seeder
                 'preco' => 29.50,
                 'descricao' => 'Pão, burguer 200g, cheddar, bacon, alface e tomate.',
                 'quantidade' => 5,
-                'imagem' => 'gourmet.jpg',
+                'imagem' => 'produtosIMG/gourmet.jpg',
                 'categoria_id' => 2,
                 'created_at' => now(),
                 'updated_at' => now()
@@ -41,7 +41,7 @@ class ProdutoSeeder extends Seeder
                 'preco' => 18.00,
                 'descricao' => 'Pão, burguer industrial, mussarela, alface e tomate.',
                 'quantidade' => 5,
-                'imagem' => 'tradicional.png',
+                'imagem' => 'produtosIMG/tradicional.png',
                 'categoria_id' => 3,
                 'created_at' => now(),
                 'updated_at' => now()
