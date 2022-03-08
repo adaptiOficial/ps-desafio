@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* CSS Resets */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* Algumas estilizações basicas */
+a {
+    text-decoration: none;
+    color: #4626d4;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    background-color: #252526;
+    color: #eee;
+    /* background-color: #eee; */
+}
+
+/* Header, menu hamburguer e caixa de filtros*/
+
+.header {
+    width: 100%;
+    height: 8vh;
+    background-color: #1e1e1e;
+    color: #eee;
+}
+
+#header-container {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sB-container {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#searchBar {
+    width: 100%;
+    height: 1.5rem;
+    background: #f5f5f5;
+    outline: none;
+    border: none;
+    border-radius: 1.625rem;
+    padding: 0 2rem 0 1rem;
+    font-size: 1rem;
+}
+
+#fake-button {
+    color: #1e1e1e;
+    width: 2rem;
+    margin-left: -2rem;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.menu-filtro {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#checkbox-menu {
+    position: absolute;
+    opacity: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+#label-menu {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 22px;
+    width: 30px;
+}
+
+#label-menu span {
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background: #eee;
+    transition: 0.25s ease-in-out;
+}
+
+#label-menu span:nth-child(1) {
+    top: 0;
+}
+#label-menu span:nth-child(2) {
+    top: 8px;
+}
+#label-menu span:nth-child(3) {
+    top: 16px;
+}
+
+#checkbox-menu:checked + #label-menu span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 8px;
+}
+#checkbox-menu:checked + #label-menu span:nth-child(2) {
+    transform: rotate(-45deg);
+    opacity: 0;
+}
+#checkbox-menu:checked + #label-menu span:nth-child(3) {
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+.filtro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vh;
+    height: 92vh;
+    background: #333233;
+
+    justify-content: space-around;
+
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    overscroll-behavior: contain;
+}
+
+.categoria-container {
+    flex-basis: auto;
+    flex-shrink: 2;
+    margin-left: 0;
+}
+.filter-titulo {
+    flex-basis: auto;
+    flex-shrink: 1;
+    margin-left: 0;
+}
+
+.filtro-container.active {
+    transform: translateX(0);
+}
+
+body.noscrollactive {
+    overflow-y: hidden;
+}
+
+/* Cards */
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.produto {
+    display: flex;
+    background: #313131;
+    height: 420px;
+    width: 280px;
+    margin: 10px 20px 10px 20px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+    padding: 5% 0% 5% 0%;
+}
+
+.produto h3 {
+    text-align: center;
+}
+.produto h4 {
+    text-align: center;
+}
+.produto p {
+    text-align: center;
+}
+
+.container-QtdeVal {
+    margin-top: auto;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+}
+
+.container-QtdeVal h4 {
+    width: 50%;
+    text-align: center;
+}
+
+/* Footer */
+
+.footer .container {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 100%;
+}
+
+.footer .copyright.float-left {
+    text-align: center;
+}
+
+.footer .float-right li {
+    list-style-type: none;
+    padding-right: 20px;
+}
+
+.footer .float-right li:nth-child(3) {
+    padding-right: 0px;
+}
+
+.footer .float-right ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
