@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\LocaleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\SiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,8 @@ Route::middleware('locale')->group(function () {
     Route::get('/', function () {
         return redirect()->route('dashboard');
     });
+
+    Route::get('/produtos', [SiteController::class, 'index'])->name('site.index');
 
     Auth::routes();
 
