@@ -49,7 +49,7 @@ class ProdutoController extends Controller
     public function store(ProdutoStoreRequest $request)
     {
         $datas = $request->all();
-        $datas['imagem'] = $request->file('imagem')->store('', 'public');
+        $datas['imagem'] = $request->file('imagem')->store('/produtosIMG', ['disk' => 'public']);
 
         $produto = $this->produtos->create($datas);
 
@@ -74,7 +74,7 @@ class ProdutoController extends Controller
     public function show(ProdutoRequest $request, $id)
     {
         $produto = $this->produtos->find($id);
-        $produto['categoria'] = Categoria::find($produto->categoria_id)->categoria;
+        $produto['categoria'] = $produto->categoria()->pluck('categoria')->first();
         return json_encode($produto);
     }
 
@@ -106,7 +106,7 @@ class ProdutoController extends Controller
         if ($request->hasFile('imagem'))
         {
             Storage::delete('public/' . $produto->imagem);
-            $datas['imagem'] = $request->file('imagem')->store('', 'public');
+            $datas['imagem'] = $request->file('imagem')->store('/produtosIMG', ['disk' => 'public']);
         }
 
         $produto->update($datas);
