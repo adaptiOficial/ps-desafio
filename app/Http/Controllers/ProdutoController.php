@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\produtoRequest;
+use App\Http\Requests\Update_produtoRequest;
 use App\Models\Categoria;
 use App\Models\Produto;
 use Illuminate\Http\Request;
@@ -59,7 +60,7 @@ class ProdutoController extends Controller
     }
 
 
-    public function update(produtoRequest $request, $id): \Illuminate\Http\RedirectResponse
+    public function update(Update_produtoRequest $request, $id): \Illuminate\Http\RedirectResponse
     {
         $data = $request -> all();
         $produto = $this -> produtos -> find($id);
