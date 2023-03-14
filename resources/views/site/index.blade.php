@@ -75,7 +75,7 @@
                 </a>
             </div>
             <div class="card">
-                <a href="{{ url('gabinetes') }}">
+                <a href="{{ url('headsets') }}">
                     <img src="{{ asset('site/img/HEADSETS.png') }}" alt="Headsets">
                 </a>
             </div>

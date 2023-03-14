@@ -415,9 +415,7 @@ button::after {
 #content-total button:active {
     --border-width: 5px;
 }
-#content-tota.dark {
-    background-color: #212121;
-}
+
 /*------------------------ FOOTER ------------------------*/
 #site-footer {
     width: 100%;
@@ -655,12 +653,12 @@ button::after {
         font-size: 15px !important;
     }
     .nome-produto {
-        font-size: 10px !important;
+        font-size: 12px !important;
     }
 }
 @media screen and (min-width: 767px) and (max-width: 1124px) {
     .nome-produto {
-        font-size: 10px !important;
+        font-size: 12px !important;
     }
 }
 @media screen and (min-width: 1124px) and (max-width: 1118px) {
