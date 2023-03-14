@@ -1,6 +1,6 @@
 {
     "git.autofetch": true,
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "vs-seti",
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "editor.formatOnSave": true,
