@@ -8,11 +8,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 
-class ProdutoController extends Controller
+class AlunoController extends Controller
 {
 
     public function index()
     {
+        return view('admin.aluno.index');
     }
 
 

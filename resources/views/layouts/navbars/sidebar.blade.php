@@ -39,18 +39,18 @@
                             </li>
                         </ul>
                         <ul class="nav">
-                            <li class="nav-item{{ $activePage == 'produtos-management' ? ' active' : '' }}">
-                                <a class="nav-link" href="{{ route('produto.index') }}">
+                            <li class="nav-item{{ $activePage == 'alunos-management' ? ' active' : '' }}">
+                                <a class="nav-link" href="{{ route('aluno.index') }}">
                                     <i class="sidebar-mini"><span class="material-icons">paid</span></i>
-                                    <span class="sidebar-normal">{{ __('Produtos') }} </span>
+                                    <span class="sidebar-normal">{{ __('Alunos') }} </span>
                                 </a>
                             </li>
                         </ul>
                         <ul class="nav">
-                            <li class="nav-item{{ $activePage == 'categoria-management' ? ' active' : '' }}">
-                                <a class="nav-link" href="{{ route('categoria.index') }}">
+                            <li class="nav-item{{ $activePage == 'curso-management' ? ' active' : '' }}">
+                                <a class="nav-link" href="{{ route('curso.index') }}">
                                     <i class="sidebar-mini"><span class="material-icons">view_comfy_alt</span></i>
-                                    <span class="sidebar-normal">{{ __('Categoria') }} </span>
+                                    <span class="sidebar-normal">{{ __('Cursos') }} </span>
                                 </a>
                             </li>
                         </ul>
