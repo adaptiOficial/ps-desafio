@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'categoria', 'titlePage' => __('Categorias')])
+@extends('layouts.app', ['activePage' => 'alunos', 'titlePage' => __('Alunos')])
 
 @section('content')
     <div class="content">
@@ -6,11 +6,11 @@
             <div class="row">
                 <div class="col-md-12">
                     <form id="form-member" method="POST" class="form-horizontal"
-                        action="{{ isset($categoria) ? route('categoria.update', $categoria->id) : route('categoria.store') }}"
-                        enctype="multipart/form-data">
+                          action="{{ isset($aluno) ? route('aluno.update', $aluno->id) : route('aluno.store') }}"
+                          enctype="multipart/form-data">
 
                         @csrf
-                        @isset($categoria)
+                        @isset($aluno)
                             @method("PUT")
                         @else
                             @method("POST")
@@ -19,9 +19,9 @@
                         <div class="card ">
                             <div class="card-header card-header-primary">
                                 <h4 class="card-title">
-                                    {{ isset($categoria) ? __('Edit categoria') : __('Create categoria') }}
+                                    {{ isset($aluno) ? __('Edit aluno') : __('Create aluno') }}
                                 </h4>
-                                <p class="card-category">{{ __('Informação da categoria') }}</p>
+                                <p class="card-category">{{ __('aluno information') }}</p>
                             </div>
                             <div class="card-body ">
                                 @if (session('status'))
@@ -29,7 +29,7 @@
                                         <div class="col-sm-12">
                                             <div class="alert alert-success">
                                                 <button type="button" class="close" data-dismiss="alert"
-                                                    aria-label="Close">
+                                                        aria-label="Close">
                                                     <i class="material-icons">close</i>
                                                 </button>
                                                 <span>{{ session('status') }}</span>
@@ -37,12 +37,13 @@
                                         </div>
                                     </div>
                                 @endif
-                                @component('categoria.formulario', ['categoria' => isset($categoria) ? $categoria : null])
+                                @component('admin.aluno.formulario', ['aluno' => isset($aluno) ?? null,
+                                    'cursos' => $cursos])
                                 @endcomponent
                             </div>
                             <div class="card-footer ml-auto mr-auto">
                                 <button type="submit" class="btn btn-success">{{ __('Save') }}</button>
-                                <a href="{{ route('categoria.index') }}" class="btn btn-secondary">Voltar</a>
+                                <a href="{{ route('aluno.index') }}" class="btn btn-secondary">Voltar</a>
                             </div>
                         </div>
                     </form>

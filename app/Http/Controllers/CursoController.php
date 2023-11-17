@@ -6,13 +6,14 @@ use Illuminate\Http\Request;
 
 use App\Models\Categoria;
 
-class CategoriaController extends Controller
+class CursoController extends Controller
 {
 
 
 
     public function index()
     {
+        return view('admin.curso.index');
     }
 
 
